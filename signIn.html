@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        width: 96%;
+        margin: 0 auto 50px;
+        display: flex;
+        align-items: center;
+      }
+      .logo {
+        width: 110px;
+        margin-right: 32px;
+        cursor: pointer;
+      }
+      .search {
+        width: 840px;
+        height: 36px;
+        border-radius: 100px;
+        border: none;
+        background-color: #f3d9fa;
+        padding-left: 16px;
+      }
+      .search-btn-icon {
+        width: 20px;
+        color: white;
+      }
+      .search-btn {
+        border: none;
+        border-radius: 32px;
+        background-color: #364fc7;
+        cursor: pointer;
+
+        padding: 8px 20px;
+      }
+      .flag-img {
+        width: 20px;
+      }
+      .flag {
+        margin-left: 24px;
+        border: 1px solid black;
+        border-radius: 100px;
+        padding: 8px 8px;
+        cursor: pointer;
+      }
+      .user-icon {
+        width: 28px;
+        margin-left: 32px;
+        border: 1px solid gray;
+        padding: 5px;
+        border-radius: 50px;
+      }
+      .sign-in-btn,
+      .sign-up-btn {
+        background-color: #f59f00;
+        margin: 0 10px;
+        color: #fff;
+        padding: 4px 10px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .cart-icon {
+        width: 32px;
+        margin: 0 20px;
+        cursor: pointer;
+      }
+      .sign-in {
+        width: 400px;
+        margin: 100px auto;
+      }
+      #email,
+      #password {
+        width: 280px;
+        font-size: 15px;
+        margin-left: 16px;
+        padding: 2px 12px;
+        height: 40px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+      }
+      #sign-in-btn {
+        width: 306px;
+        margin-left: 16px;
+        font-size: 16px;
+        background-color: #f59f00;
+        border: none;
+        margin-top: 20px;
+        height: 40px;
+        cursor: pointer;
+      }
+      .sign-in-h2 {
+        margin-left: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://c1.neweggimages.com/WebResource/Themes/Nest/logos/Newegg_full_color_logo_RGB.SVG"
+          alt="newegg"
+          class="logo"
+      /></a>
+
+      <input type="text" class="search" placeholder="Search here" />
+      <button class="search-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="search-btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </button>
+      <div class="flag">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAA+CAMAAAAmsHQcAAAAqFBMVEX///+/CzAAJ2jowcO7ABe+ACy8ABv//v6/DjPmur69ACnDLkK+AC3EOEvLWWPbmZ3y3d79+Pm9ACK/HDG5AAEAI2bAwc4AAFwAIGUAGmMABF0AHWQADV8AFWGqEj3X2eCyuMiepLktPnQ6SXtGUYCRmLHm6O0gNnCorsESLmx+haLHy9cAAFRzepry8/aIkKuvT2RTXodkbZG9hZKpADWnACnNvMbGpa8yIHPVAAADtUlEQVRYhe2Z627kNgyFFW2T2bbpvbSujm35JtmTuDPttu//ZiWlSbABFlgMwMBAm/NHOXFgjiV+JD0REqVlkX61fNE+3HxkkcB7+Uege0K9WJltylY9Wwdk/eIp7v0Nhyiu2Z6aASSE9TA6KR3aHm2PtkY7Hlayw3rYDGtcmKdV0YPFadDZVmRtO+GnQfvUklXVU0D713csuqW4IfUSNOje94AKrkcD0Gu0Gvr6YgHjwh8/8ojOF2NJ14WEt00y4mmijS7bfgSyJppEfyVtI5h0ydVFNPQ4YRJ0imYUzUxnPIlHPPK6E02i5GKOa0APVbTSSN+2A6A9tdGjVW0VwEh9brsaLXNctUgnvQO/YWiPNmWrirVbrcE7bTfFG9dsB0pkCI3oHO3xYcocoUWODO5x5qgRo5Hmz594lDlqKvuKo7Zw1BSOilXtNBNHv/KI9nnWM50yBB8AEoSaQAV5Wem32RpaGesGhZRqTEQM1J0icFRU2c6jJWsx6WjljovVUEyhgDOWQ812eBILcRQzVqRPv/Mox8VqlDnShSMsT6cKOdJ4qOsM7sIRNQv/9888Khwlk6zWfjsiOMkuc7ZqRKvScatd8uAUXmXmSEynzzkSn3PknjmaiCPOuBhwLRw1FB5t9cyRzlcv/YgKKWu9mj3Sg+mc1Aw6wazoZ5DJzpTTQSVsEPgJFNLmm194dMlnmeKQG1CItMjUJmoEaehyP0jtXPoCPPzGo2eOlgLO1/qRfLi959BNjovtfYidxV31MQ7YaPUpdh6oXrQBZy99jkh1DsxZN/wy6+Q1OGxArn6x1J4cYrXR58FKtlHyPfDNOWZ56UejprmucEQ2z3Uv/QhPQDPOOQTOa44QHHjNEbwJR3WSyA8ChMPFrEPGScPskaN0sQ5pm9nnK5wW2xMlcBha2lTZr0O250gW+mqY32C+ws7wmEnBESCDg1it2U7irHMlXQtGrHFzA+oQHI3ttxs02TFb30XkCNx5HGtckeR/PvAox91Ckth0UqelQU7HHq1JsljdYa3KV+mRP33DorvMUQEH93gse1xG6QtHW7HYnhbm96OwtvSq57v1ROD0a5uxateh2GjzXLeyzlfeqvrovbVWmaNWuLhjjYu19dGQ1RfryXq2fa6uE1NafeDC4l1f0WEfie/3kbhhmVuun3M+stSB6+vG/e0euhc/7KO9cXrXG+vbfSTueBrq1f13r7qxV9y7fbRbXr3rvy2m9/er3/dveb6wuPr7jf9bveL5N+PV+he6q/OiIzqTHQAAAABJRU5ErkJggg=="
+          alt=""
+          class="flag-img"
+        />
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="user-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+        />
+      </svg>
+      <a href="signIn.html"><button class="sign-in-btn">Sign In</button></a>
+      <a href="signUp.html"><button class="sign-up-btn">Sign Up</button></a>
+
+      <a href="cart.html"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="cart-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+          /></svg
+      ></a>
+    </nav>
+    <div class="sign-in">
+      <h2 class="sign-in-h2">Sign In</h2>
+      <input type="text" placeholder="Email Address" id="email" />
+      <input type="password" placeholder="Password" id="password" />
+      <button onclick="signIn()" id="sign-in-btn">SIGN IN</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  "use strict";
+  function signIn() {
+    let count = 0;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let users = JSON.parse(localStorage.getItem("userDetails"));
+    users.forEach((element) => {
+      if (element.email === email && element.password === password) {
+        alert("Congratulations! You have successfully Signed In😃");
+        count++;
+      }
+    });
+    if (count === 0) {
+      alert("Invalid Credentials!😟");
+    }
+  }
+</script>

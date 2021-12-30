@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:ital,wght@1,500&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Newegg</title>
+    <style>
+      nav {
+        width: 96%;
+        margin: 0 auto 50px;
+        display: flex;
+        align-items: center;
+      }
+      .logo {
+        width: 110px;
+        margin-right: 32px;
+        cursor: pointer;
+      }
+      .search {
+        width: 840px;
+        height: 36px;
+        border-radius: 100px;
+        border: none;
+        background-color: #f3d9fa;
+        padding-left: 16px;
+      }
+      .search-btn-icon {
+        width: 20px;
+        color: white;
+      }
+      .search-btn {
+        border: none;
+        border-radius: 32px;
+        background-color: #364fc7;
+        cursor: pointer;
+
+        padding: 8px 20px;
+      }
+      .flag-img {
+        width: 20px;
+      }
+      .flag {
+        margin-left: 24px;
+        border: 1px solid black;
+        border-radius: 100px;
+        padding: 8px 8px;
+        cursor: pointer;
+      }
+      .user-icon {
+        width: 28px;
+        margin-left: 32px;
+        border: 1px solid gray;
+        padding: 5px;
+        border-radius: 50px;
+      }
+      .sign-in-btn,
+      .sign-up-btn {
+        background-color: #f59f00;
+        margin: 0 10px;
+        color: #fff;
+        padding: 4px 10px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .cart-icon {
+        width: 32px;
+        margin: 0 20px;
+        cursor: pointer;
+        color: #495057;
+      }
+      header {
+        width: 1300px;
+        margin: auto;
+        display: flex;
+        gap: 24px;
+        margin-bottom: 100px;
+      }
+      header > div {
+        width: 350px;
+        border: 2px solid #adb5bd;
+        border-radius: 10px;
+        padding: 20px 24px 64px;
+      }
+      .sign-in-2-btn {
+        background-color: #e8590c;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 10px 80px;
+        border-radius: 50px;
+        font-size: 14px;
+        margin-bottom: 32px;
+        margin-left: 64px;
+      }
+      header h3 {
+        font-family: Bakbak One;
+        letter-spacing: 1px;
+        margin-bottom: 32px;
+        font-style: italic;
+        font-weight: bolder;
+        text-align: left;
+      }
+      header:nth-child(1) > div > div {
+        margin-left: 64px;
+      }
+      header img {
+        width: 140px;
+      }
+      .header-items {
+        display: flex;
+        gap: 32px;
+      }
+      .header-items img {
+        cursor: pointer;
+      }
+      article {
+        width: 1500px;
+        margin: auto;
+      }
+      article > h2 {
+        font-family: serif;
+        margin-left: 32px;
+      }
+      .main-items h2 {
+        font-style: italic;
+      }
+      .speaker-img {
+        width: 320px;
+        margin-top: 100px;
+      }
+      .main-items > div {
+        background-color: #edf2ff;
+        padding: 16px 24px;
+        border-radius: 10px;
+      }
+      .items-flex {
+        display: flex;
+        gap: 32px;
+      }
+      .items-flex img {
+        width: 200px;
+      }
+      .main-items {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        gap: 32px;
+        margin-bottom: 100px;
+        margin-left: 32px;
+      }
+      .main-items i {
+        color: #4263eb;
+        font-weight: bolder;
+        font-size: 12px;
+      }
+      .main-items > div:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      .items-flex > div > div {
+        margin-bottom: 5px;
+      }
+      .items-flex > div > div:nth-child(n + 3) {
+        color: #868e96;
+      }
+      .more-items {
+        display: flex;
+        width: 1350px;
+        margin: 0 auto 100px;
+        gap: 30px;
+      }
+      .more-items img {
+        width: 200px;
+        float: right;
+        margin-top: 40px;
+      }
+      .more-items > div {
+        background-color: #f1f3f5;
+        width: 320px;
+        padding: 10px 16px;
+        border-radius: 8px;
+      }
+      .savings {
+        background-color: #d9480f;
+        color: #fff;
+        font-family: bolder;
+        font-size: 12px;
+        padding: 3px 8px;
+        border-radius: 2px;
+      }
+      .free-ship {
+        color: #364fc7;
+        font-family: bold;
+        font-weight: bolder;
+        font-size: 14px;
+      }
+      .categories {
+        padding: 50px 32px;
+        background-color: #e9ecef;
+        margin-bottom: 100px;
+      }
+      .categories-h1 {
+        font-family: Bakbak One;
+        letter-spacing: 2px;
+      }
+      .categories-items {
+        display: flex;
+        gap: 32px;
+      }
+      .categories-items img {
+        width: 130px;
+        cursor: pointer;
+      }
+      .categories h5 {
+        text-align: center;
+        font-family: serif;
+      }
+      .categories img:hover {
+        background-color: #ced4da;
+        border-radius: 8px;
+      }
+      .features-imgs {
+        display: flex;
+        gap: 32px;
+      }
+      .features-imgs img {
+        width: 465px;
+        border-radius: 16px;
+        height: 260px;
+      }
+      .features-h1 {
+        font-family: bakbak one;
+        letter-spacing: 2px;
+        font-size: 32px;
+      }
+      .features {
+        padding: 0 20px;
+        margin-bottom: 100px;
+      }
+      .footer-features {
+        display: flex;
+        gap: 50px;
+        width: 1200px;
+        margin: auto;
+      }
+      .footer-features img {
+        width: 240px;
+      }
+      .footer-h1 {
+        font-family: bakbak one;
+        letter-spacing: 1px;
+        margin-left: 150px;
+        text-align: center;
+      }
+      footer h3 {
+        font-family: serif;
+        color: #364fc7;
+      }
+      footer {
+        margin-bottom: 50px;
+        background-color: #dbe4ff;
+        padding: 32px 0 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://c1.neweggimages.com/WebResource/Themes/Nest/logos/Newegg_full_color_logo_RGB.SVG"
+          alt="newegg"
+          class="logo"
+      /></a>
+      <input type="text" class="search" placeholder="Search here" />
+      <button class="search-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="search-btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </button>
+      <div class="flag">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAA+CAMAAAAmsHQcAAAAqFBMVEX///+/CzAAJ2jowcO7ABe+ACy8ABv//v6/DjPmur69ACnDLkK+AC3EOEvLWWPbmZ3y3d79+Pm9ACK/HDG5AAEAI2bAwc4AAFwAIGUAGmMABF0AHWQADV8AFWGqEj3X2eCyuMiepLktPnQ6SXtGUYCRmLHm6O0gNnCorsESLmx+haLHy9cAAFRzepry8/aIkKuvT2RTXodkbZG9hZKpADWnACnNvMbGpa8yIHPVAAADtUlEQVRYhe2Z627kNgyFFW2T2bbpvbSujm35JtmTuDPttu//ZiWlSbABFlgMwMBAm/NHOXFgjiV+JD0REqVlkX61fNE+3HxkkcB7+Uege0K9WJltylY9Wwdk/eIp7v0Nhyiu2Z6aASSE9TA6KR3aHm2PtkY7Hlayw3rYDGtcmKdV0YPFadDZVmRtO+GnQfvUklXVU0D713csuqW4IfUSNOje94AKrkcD0Gu0Gvr6YgHjwh8/8ojOF2NJ14WEt00y4mmijS7bfgSyJppEfyVtI5h0ydVFNPQ4YRJ0imYUzUxnPIlHPPK6E02i5GKOa0APVbTSSN+2A6A9tdGjVW0VwEh9brsaLXNctUgnvQO/YWiPNmWrirVbrcE7bTfFG9dsB0pkCI3oHO3xYcocoUWODO5x5qgRo5Hmz594lDlqKvuKo7Zw1BSOilXtNBNHv/KI9nnWM50yBB8AEoSaQAV5Wem32RpaGesGhZRqTEQM1J0icFRU2c6jJWsx6WjljovVUEyhgDOWQ812eBILcRQzVqRPv/Mox8VqlDnShSMsT6cKOdJ4qOsM7sIRNQv/9888Khwlk6zWfjsiOMkuc7ZqRKvScatd8uAUXmXmSEynzzkSn3PknjmaiCPOuBhwLRw1FB5t9cyRzlcv/YgKKWu9mj3Sg+mc1Aw6wazoZ5DJzpTTQSVsEPgJFNLmm194dMlnmeKQG1CItMjUJmoEaehyP0jtXPoCPPzGo2eOlgLO1/qRfLi959BNjovtfYidxV31MQ7YaPUpdh6oXrQBZy99jkh1DsxZN/wy6+Q1OGxArn6x1J4cYrXR58FKtlHyPfDNOWZ56UejprmucEQ2z3Uv/QhPQDPOOQTOa44QHHjNEbwJR3WSyA8ChMPFrEPGScPskaN0sQ5pm9nnK5wW2xMlcBha2lTZr0O250gW+mqY32C+ws7wmEnBESCDg1it2U7irHMlXQtGrHFzA+oQHI3ttxs02TFb30XkCNx5HGtckeR/PvAox91Ckth0UqelQU7HHq1JsljdYa3KV+mRP33DorvMUQEH93gse1xG6QtHW7HYnhbm96OwtvSq57v1ROD0a5uxateh2GjzXLeyzlfeqvrovbVWmaNWuLhjjYu19dGQ1RfryXq2fa6uE1NafeDC4l1f0WEfie/3kbhhmVuun3M+stSB6+vG/e0euhc/7KO9cXrXG+vbfSTueBrq1f13r7qxV9y7fbRbXr3rvy2m9/er3/dveb6wuPr7jf9bveL5N+PV+he6q/OiIzqTHQAAAABJRU5ErkJggg=="
+          alt=""
+          class="flag-img"
+        />
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="user-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+        />
+      </svg>
+      <a href="signIn.html"><button class="sign-in-btn">Sign In</button></a>
+      <a href="signUp.html"><button class="sign-up-btn">Sign Up</button></a>
+
+      <a href="cart.html"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="cart-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+          /></svg
+      ></a>
+    </nav>
+    <header>
+      <div>
+        <h3>SIGN IN FOR THE BEST EXPERIENCE</h3>
+        <a href="signIn.html"><button class="sign-in-2-btn">SIGN IN</button></a>
+        <div style="text-align: center">
+          New to Newegg? <strong><a href="signup.html">SIGN UP</a></strong>
+        </div>
+      </div>
+      <div>
+        <h3>RECOMMENDED CATEGORIES</h3>
+        <div class="header-items">
+          <div>
+            <a href="product.html"
+              ><img
+                src="https://c1.neweggimages.com/navigation300/3_48.jpg?ex=2"
+                alt=""
+            /></a>
+
+            <div>Desktop Graphic Cards</div>
+          </div>
+          <div>
+            <a href="product.html"
+              ><img
+                src="https://c1.neweggimages.com/navigation300/3_343.jpg?ex=2"
+                alt=""
+            /></a>
+
+            <div>Processors - Desktops</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>ITEMS YOU MAY LIKE</h3>
+        <div class="header-items">
+          <div>
+            <a href="product.html">
+              <img
+                src="https://c1.neweggimages.com/ProductImageCompressAll300/19-113-498-V01.jpg?ex=2"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="product.html">
+              <img
+                src="https://c1.neweggimages.com/ProductImageCompressAll300/0JC-000D-006W5-S01.jpg?ex=2"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <article>
+      <h2>TODAY'S BEST DEALS</h2>
+      <div class="main-items">
+        <div>
+          <h2>
+            Corsair Hydro Series, iCUE H100i ELITE CAPELLIX, 240mm Radiator,
+            Dual ML120...
+          </h2>
+          <p>₹11,920 , ₹4,819 Shipping</p>
+          <a href="product.html"
+            ><img
+              src="https://c1.neweggimages.com/ProductImage/35-181-201-01.jpg?ex=2"
+              alt=""
+              class="speaker-img"
+          /></a>
+        </div>
+        <div class="items-flex">
+          <div>
+            <h3>CORSAIR Vengeance LPX 16GB (2 x 8GB) 288-Pin...</h3>
+            <div>₹ 6,140</div>
+            <div>Est. Shipping Fee ₹ 2,348</div>
+            <div>Eligible for <i>FREE SHIPPING</i></div>
+          </div>
+          <div>
+            <a href="product.html"
+              ><img
+                src="https://c1.neweggimages.com/ProductImageCompressAll300/20-233-859-01.jpg?ex=2"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="items-flex">
+          <div>
+            <h3>GIGABYTE M32U 32" (31.5" Viewable) 3840 x 2160 4K...</h3>
+            <div>₹ 73,371</div>
+            <div>₹ 12,294 Shipping</div>
+            <div>Eligible for <i>FREE SHIPPING</i></div>
+          </div>
+          <div>
+            <a href="product.html">
+              <img
+                src="https://c1.neweggimages.com/ProductImageCompressAll300/24-012-042-V01.jpg?ex=2"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+        <div class="items-flex">
+          <div>
+            <h3>NVIDIA SHIELD Android TV Pro - 4K HDR Streaming...</h3>
+            <div>₹ 17,823</div>
+            <div>Est. Shipping Fee ₹ 2,927</div>
+            <div>Eligible for <i>FREE SHIPPING</i></div>
+          </div>
+          <div>
+            <a href="product.html"
+              ><img
+                src="https://c1.neweggimages.com/ProductImageCompressAll300/15-351-017-S08.jpg?ex=2"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="items-flex">
+          <div>
+            <h3>MSI Laptop Modern 15 A11MU-681 Intel Core i7...</h3>
+            <div>₹ 69,214</div>
+
+            <i>FREE SHIPPING</i>
+          </div>
+          <div>
+            <a href="product.html">
+              <img
+                src="https://c1.neweggimages.com/ProductImageCompressAll300/34-156-041-11.jpg?ex=2"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="more-items">
+        <div>
+          <h3>
+            SAMSUNG 970 EVO PLUS M.2 2280 1TB PCIe Gen 3.0 x4, NVMe 1.3 V-NAND
+            3-bi...
+          </h3>
+          <span class="savings">Save 12%</span>
+          <p>₹ 11,883</p>
+          <div>Est. Shipping Fee ₹2,348</div>
+          <p>Eligible for <i class="free-ship">FREE SHIPPING</i></p>
+          <img
+            src="https://c1.neweggimages.com/ProductImageCompressAll300/20-147-743-V01.jpg?ex=2"
+            alt=""
+          />
+        </div>
+        <div>
+          <h3>
+            ASUS TUF Gaming 27" 1440P Monitor (VG27AQL1A) - QHD (2560 x 1440),
+            IPS,...
+          </h3>
+          <p>₹ 26,558</p>
+          <div>₹ 8,536 Shipping</div>
+          <img
+            src="https://c1.neweggimages.com/ProductImageCompressAll300/24-281-067-S01.jpg?ex=2"
+            alt=""
+          />
+        </div>
+        <div>
+          <h3>
+            Beyerdynamic DT 770 Pro 32 Ohm Studio Reference Closed-Back...
+          </h3>
+          <p>₹ 14,754</p>
+          <div>Est. Shipping Fee ₹ 5,386</div>
+          <p>Eligible for <i class="free-ship">FREE SHIPPING</i></p>
+          <img
+            src="https://c1.neweggimages.com/ProductImageCompressAll300/0TH-00JD-001T7-S02.jpg?ex=2"
+            alt=""
+          />
+        </div>
+        <div>
+          <h3>Philips Hue 802074 Lily Outdoor Spot Light...</h3>
+          <p>₹ 9,901</p>
+          <div>Est. Shipping Fee ₹ 5,974</div>
+          <p>Eligible for <i class="free-ship">FREE SHIPPING</i></p>
+          <img
+            src="https://c1.neweggimages.com/ProductImageCompressAll300/81-609-058-S04.jpg?ex=2"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="categories">
+        <h1 class="categories-h1">CATEGORIES</h1>
+        <div class="categories-items">
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/pcs.png"
+              alt=""
+            />
+            <h5>Gaming PCs</h5>
+          </div>
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/laptop2.png"
+              alt=""
+            />
+            <h5>Gaming Laptops</h5>
+          </div>
+
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/motherboard1.png"
+              alt=""
+            />
+            <h5>Motherboards</h5>
+          </div>
+
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/graphiccard2.png"
+              alt=""
+            />
+            <h5>Video Cards</h5>
+          </div>
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/storage1.png"
+              alt=""
+            />
+            <h5>Storage</h5>
+          </div>
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/memory.png"
+              alt=""
+            />
+            <h5>Memory</h5>
+          </div>
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/monitor.png"
+              alt=""
+            />
+            <h5>Monitors</h5>
+          </div>
+
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/cases.png"
+              alt=""
+            />
+            <h5>Cases</h5>
+          </div>
+          <div>
+            <img
+              src="https://promotions.newegg.com/international/21-1780/cellphones.png"
+              alt=""
+            />
+            <h5>Cell Phones</h5>
+          </div>
+        </div>
+      </div>
+      <div class="features">
+        <h1 class="features-h1">NEWEGG FEATURES</h1>
+        <div class="features-imgs">
+          <img
+            src="https://c1.neweggimages.com/WebResource/Themes/Nest/586x280__0004_Marketplace-Sellers.png"
+            alt=""
+          />
+          <img
+            src="https://c1.neweggimages.com/WebResource/Themes/Nest/ne_features_pcbuilder.jpg"
+            alt=""
+          />
+          <img
+            src="https://c1.neweggimages.com/WebResource/Themes/Nest/ne_features_live.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </article>
+    <footer>
+      <h1 class="footer-h1">WHAT'S NEWEGG?</h1>
+      <div class="footer-features">
+        <div>
+          <h3>The Leading Tech-Focused e-Retailer</h3>
+          <p>
+            Today, millions of customers turn to Newegg to shop for the latest
+            PC components, consumer electronics, smart home, gaming products and
+            more.
+          </p>
+          <img
+            src="https://c1.neweggimages.com/WebResource/Themes/Nest/bgs/Newegg_01_Tech.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://c1.neweggimages.com/WebResource/Themes/Nest/bgs/Newegg_02_Award.png"
+            alt=""
+          />
+          <h3>Reliable & Award-Winning Experience</h3>
+          <p>
+            Newegg is consistently ranked as one of the best online shopping
+            destinations, and the company regularly earns industry-leading
+            customer service ratings.
+          </p>
+        </div>
+        <div>
+          <h3>Global Shopping</h3>
+          <p>
+            Newegg is based in North America, with a global reach in Europe,
+            South America, Asia Pacific and the Middle East.
+          </p>
+          <img
+            src="https://c1.neweggimages.com/WebResource/Themes/Nest/bgs/Newegg_03_Global.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
